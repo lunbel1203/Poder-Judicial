@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/img/favicon.png" sizes="32x32" />
+    <link href="/assets/css/styles.css" rel="stylesheet">
+    <title>Poder judicial - Formulario de Deposito expediente presencial</title>
+</head>
+<body>
+    <main class="expedientes">
+        <div class="expedientes__container">
+            <div class="header__screen">
+                <div class="back__btn">
+                    <a href="/index.html">
+                        <i class="fas fa-arrow-left"></i> Regresar
+                    </a>
+                </div>
+                <div class="borradores__disponibles" id="borradores__disponibles">
+                    <a href="/index.html">
+                        <i class="far fa-file-alt"></i>  5 borradores disponibles
+                    </a>
+                </div>
+            </div>
+            <div class="screen__body">
+                <div class="body__header">
+                    <div class="screen__header">
+                        <h1>Formulario de Deposito expediente presencial</h1>
+                    </div>
+                    <div class="panel__tabs">
+                        <ul class="panel__tabs__container">
+                            <li class="panel__tab tab__active">
+                                <h3>Recepción</h3>
+                            </li>
+                            <li class="panel__tab ">
+                                <h3>Inmobiliario</h3>
+                            </li>
+                            <li class="panel__tab">
+                                <h3>Partes</h3>
+                            </li>
+                            <li class="panel__tab">
+                                <h3>Documentos</h3>
+                            </li>
+                            <li class="panel__tab">
+                                <h3>Tasas judiciales</h3>
+                            </li>
+                            <li class="panel__tab">
+                                <h3>Verificación</h3>
+                            </li>
+                        </ul>
+                        <div class="panel__progress-bar">
+                            <div class="progress__bar" id="progress__bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="step__content step-1 step__active" id="recepcion">
+                        <div class="recepcion__content">
+                            <div class="body__content-depositante">
+                                <h3 class="step__content-title">
+                                    Depositante
+                                </h3>
+                                <div class="depositante__form">
+                                    <div class="form__group">
+                                        <label for="typeId">Tipo de identificación<span>*</span></label>
+                                        <select name="typeId">
+                                            <option value="Seleccionar tipo de identificación">Seleccionar tipo de identificación</option>
+                                            <option value="pasaporte">Pasaporte</option>
+                                            <option value="cedula">Cédula</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__group id">
+                                        <label for="id">Identificación<span>*</span></label>
+                                        <input type="text" name="id" placeholder="002-1231614-5">
+                                        <a href=""class="searchId"><i class="fas fa-search"></i></a>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="full-name">Nombre completo<span>*</span></label>
+                                        <input type="text" name="full-name" placeholder="Jose Luis Beltre Vizcaino" disabled="disabled">
+                                    </div>
+                                    <div class="form__group column email">
+                                        <label for="full-name">Correo electrónico</label>
+                                        <input type="text" name="email" placeholder="Ej.: lunbel1203@gmail.com">
+                                    </div>
+                                    <div class="form__group column sexo">
+                                        <label for="sexo">Sexo</label>
+                                        <select name="typeId">
+                                            <option value="select-default">Seleccionar sexo</option>
+                                            <option value="hombre">Hombre</option>
+                                            <option value="mujer">Mujer</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__group column phone">
+                                        <label for="phone">Teléfono</label>
+                                        <input type="text" name="phone" placeholder="Ej.: 809-555-5555">
+                                    </div>
+                                    <div class="form__group column mobile">
+                                        <label for="mobile">Celular</label>
+                                        <input type="text" name="mobile" placeholder="Ej.: 829-427-4047">
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="profile">Perfil de portal<span>*</span></label>
+                                        <select name="typeId">
+                                            <option value="profile">Seleccione perfil</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body__content-deposito">
+                                <h3 class="step__content-title">
+                                    Deposito
+                                </h3>
+
+                            </div>
+                            <div class="body__content-footer">
+                                <div class="body__footer-left">
+                                </div>
+                                <div class="body__footer-right">
+                                    <a class="block-right__button prev-btn disabled__button">Atrás</a>
+                                    <a class="block-right__button next-btn">Sigueinte</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__content step-2 " id="inmobiliario">
+                        <div class="actions__buttons">
+                            <a href="" class="actions__link">
+                                <i class="far fa-newspaper"></i>
+                            </a>
+                            <a href="" class="actions__link">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                        <div class="body__content-left"><h1>Inmobiliario</h1></div>
+                        <div class="body__content-right"></div>
+                        <div class="body__content-footer">
+                            <div class="body__footer-left">
+                            </div>
+                            <div class="body__footer-right">
+                                <a class="block-right__button prev-btn">Atrás</a>
+                                <a class="block-right__button next-btn">Sigueinte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__content step-3" id="partes">
+                        <div class="actions__buttons">
+                            <a href="" class="actions__link">
+                                <i class="far fa-newspaper"></i>
+                            </a>
+                            <a href="" class="actions__link">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                        <div class="body__content-left"><h1>Partes</h1></div>
+                        <div class="body__content-right"></div>
+                        <div class="body__content-footer">
+                            <div class="body__footer-left">
+                            </div>
+                            <div class="body__footer-right">
+                                <a class="block-right__button prev-btn">Atrás</a>
+                                <a class="block-right__button next-btn">Sigueinte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__content step-4" id="documentos">
+                        <div class="actions__buttons">
+                            <a href="" class="actions__link">
+                                <i class="far fa-newspaper"></i>
+                            </a>
+                            <a href="" class="actions__link">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                        <div class="body__content-left"><h1>Documentos</h1></div>
+                        <div class="body__content-right"></div>
+                        <div class="body__content-footer">
+                            <div class="body__footer-left">
+                            </div>
+                            <div class="body__footer-right">
+                                <a class="block-right__button prev-btn">Atrás</a>
+                                <a class="block-right__button next-btn">Sigueinte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__content step-5" id="tasas">
+                        <div class="actions__buttons">
+                            <a href="" class="actions__link">
+                                <i class="far fa-newspaper"></i>
+                            </a>
+                            <a href="" class="actions__link">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                        <div class="body__content-left"><h1>Tasas</h1></div>
+                        <div class="body__content-right"></div>
+                        <div class="body__content-footer">
+                            <div class="body__footer-left">
+                            </div>
+                            <div class="body__footer-right">
+                                <a class="block-right__button prev-btn">Atrás</a>
+                                <a class="block-right__button next-btn">Sigueinte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step__content step-6" id="verificacion">
+                        <div class="actions__buttons">
+                            <a href="" class="actions__link">
+                                <i class="far fa-newspaper"></i>
+                            </a>
+                            <a href="" class="actions__link">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </div>
+                        <div class="body__content-left"><h1>Verificacion</h1></div>
+                        <div class="body__content-right"></div>
+                        <div class="body__content-footer">
+                            <div class="body__footer-left">
+                            </div>
+                            <div class="body__footer-right">
+                                <a class="block-right__button prev-btn">Atrás</a>
+                                <a class="block-right__button submit-btn">Guardar</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="/assets/fontawesome/js/all.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+</body>
+</html>
