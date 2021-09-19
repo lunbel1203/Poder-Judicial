@@ -137,12 +137,76 @@
                                     <h3 class="step__content-title">
                                         Ubicación
                                     </h3>
+                                    <div class="row__field">
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="categoryTribunal">Categoría Tribunal<span>*</span></label>
+                                            <select name="categoryTribunal">
+                                                <option value="selecet">Seleccione categoría</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="matter">Materia<span>*</span></label>
+                                            <select name="matter">
+                                                <option value="selecet">Seleccionar materia</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginT">
+                                            <label for="matter">Sede</label>
+                                            <select name="matter">
+                                                <option value="selecet">Seleccionar sede</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginR">
+                                            <label for="departamentJudicial">Departamento Judicial*<span>*</span></label>
+                                            <select name="departamentJudicial">
+                                                <option value="selecet">Seleccionar departamento</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginR">
+                                            <label for="districtJudicial">Distrito Judicial*<span>*</span></label>
+                                            <select name="districtJudicial">
+                                                <option value="selecet">Seleccionar distrito</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3">
+                                            <label for="tribunal">Tribunal<span>*</span></label>
+                                            <select name="tribunal">
+                                                <option value="selecet">Seleccionar tribunal</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginR">
+                                            <label for="sala">Sala</label>
+                                            <select name="sala">
+                                                <option value="selecet">Seleccionar sala</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <div class="deposito__row">
                                     <h3 class="step__content-title">
                                         Trámite
                                     </h3>
+                                    <div class="row__field">
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="procedureType">Tipo de procedimiento<span>*</span></label>
+                                            <select name="procedureType">
+                                                <option value="selecet">Seleccionar tipo de procedimiento</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="subject">Asunto<span>*</span></label>
+                                            <select name="subject">
+                                                <option value="selecet">Seleccionar asunto</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginT">
+                                            <label for="object">Objeto<span>*</span></label>
+                                            <select name="object">
+                                                <option value="selecet">Seleccionar objeto</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -237,22 +301,172 @@
                         </div>
                     </div>
                     <div class="step__content step-6" id="verificacion">
-                        <div class="actions__buttons">
-                            <a href="" class="actions__link">
-                                <i class="far fa-newspaper"></i>
-                            </a>
-                            <a href="" class="actions__link">
-                                <i class="far fa-trash-alt"></i>
-                            </a>
-                        </div>
-                        <div class="body__content-left"><h1>Verificacion</h1></div>
-                        <div class="body__content-right"></div>
-                        <div class="body__content-footer">
-                            <div class="body__footer-left">
-                            </div>
-                            <div class="body__footer-right">
-                                <a class="block-right__button prev-btn">Atrás</a>
-                                <a class="block-right__button submit-btn">Guardar</a>
+                        <div class="verificacion__recepcion">
+                            <h1 class="verificacion__title">
+                                Recepción
+                            </h1>
+                            <div class="recepcion__content">
+                                <div class="body__content-depositante">
+                                    <h3 class="step__content-title">
+                                        Depositante
+                                    </h3>
+                                    <div class="depositante__form">
+                                        <div class="form__group">
+                                            <label for="typeId">Tipo de identificación<span>*</span></label>
+                                            <select name="typeId">
+                                                <option value="Seleccionar tipo de identificación">Seleccionar tipo de identificación</option>
+                                                <option value="pasaporte">Pasaporte</option>
+                                                <option value="cedula">Cédula</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group id">
+                                            <label for="id">Identificación<span>*</span></label>
+                                            <input type="text" name="id" placeholder="002-1231614-5">
+                                            <a href=""class="searchId"><i class="fas fa-search"></i></a>
+                                        </div>
+                                        <div class="form__group">
+                                            <label for="full-name">Nombre completo<span>*</span></label>
+                                            <input type="text" name="full-name" placeholder="Jose Luis Beltre Vizcaino" disabled="disabled">
+                                        </div>
+                                        <div class="form__group column-2 email">
+                                            <label for="full-name">Correo electrónico</label>
+                                            <input type="text" name="email" placeholder="Ej.: lunbel1203@gmail.com">
+                                        </div>
+                                        <div class="form__group column-2 sexo">
+                                            <label for="sexo">Sexo</label>
+                                            <select name="typeId">
+                                                <option value="select-default">Seleccionar sexo</option>
+                                                <option value="hombre">Hombre</option>
+                                                <option value="mujer">Mujer</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-2 phone">
+                                            <label for="phone">Teléfono</label>
+                                            <input type="text" name="phone" placeholder="Ej.: 809-555-5555">
+                                        </div>
+                                        <div class="form__group column-2 mobile">
+                                            <label for="mobile">Celular</label>
+                                            <input type="text" name="mobile" placeholder="Ej.: 829-427-4047">
+                                        </div>
+                                        <div class="form__group">
+                                            <label for="profile">Perfil de portal<span>*</span></label>
+                                            <select name="typeId">
+                                                <option value="profile">Seleccione perfil</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="body__content-deposito">
+                                    <div class="deposito__row">
+                                        <h3 class="step__content-title">
+                                            Deposito
+                                        </h3>
+                                        <div class="row__field">
+                                            <div class="form__group column-3 marginT marginR column-icon">
+                                                <label for="receptionDate">Fecha recepción<span>*</span></label>
+                                                <input type="datetime-local" name="receptionDate" placeholder="dd/mm/yyyy hh:mm am/pm">
+                                                <span class="icon-item"><i class="far fa-calendar"></i></span>
+                                            </div>
+                                            <div class="form__group column-3 marginT marginR">
+                                                <label for="newExpediente">¿Es un expediente nuevo?<span>*</span></label>
+                                                <select name="newExpediente">
+                                                    <option value="selecet">Seleccionar</option>
+                                                    <option value="si">Si</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginT">
+                                                <label for="nuc">NUC<span>*</span></label>
+                                                <input type="text" name="nuc" placeholder="2021-00015">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="deposito__row">
+                                        <h3 class="step__content-title">
+                                            Ubicación
+                                        </h3>
+                                        <div class="row__field">
+                                            <div class="form__group column-3 marginT marginR">
+                                                <label for="categoryTribunal">Categoría Tribunal<span>*</span></label>
+                                                <select name="categoryTribunal">
+                                                    <option value="selecet">Seleccione categoría</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginT marginR">
+                                                <label for="matter">Materia<span>*</span></label>
+                                                <select name="matter">
+                                                    <option value="selecet">Seleccionar materia</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginT">
+                                                <label for="matter">Sede</label>
+                                                <select name="matter">
+                                                    <option value="selecet">Seleccionar sede</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginR">
+                                                <label for="departamentJudicial">Departamento Judicial*<span>*</span></label>
+                                                <select name="departamentJudicial">
+                                                    <option value="selecet">Seleccionar departamento</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginR">
+                                                <label for="districtJudicial">Distrito Judicial*<span>*</span></label>
+                                                <select name="districtJudicial">
+                                                    <option value="selecet">Seleccionar distrito</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3">
+                                                <label for="tribunal">Tribunal<span>*</span></label>
+                                                <select name="tribunal">
+                                                    <option value="selecet">Seleccionar tribunal</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginR">
+                                                <label for="sala">Sala</label>
+                                                <select name="sala">
+                                                    <option value="selecet">Seleccionar sala</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="deposito__row">
+                                        <h3 class="step__content-title">
+                                            Trámite
+                                        </h3>
+                                        <div class="row__field">
+                                            <div class="form__group column-3 marginT marginR">
+                                                <label for="procedureType">Tipo de procedimiento<span>*</span></label>
+                                                <select name="procedureType">
+                                                    <option value="selecet">Seleccionar tipo de procedimiento</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginT marginR">
+                                                <label for="subject">Asunto<span>*</span></label>
+                                                <select name="subject">
+                                                    <option value="selecet">Seleccionar asunto</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group column-3 marginT">
+                                                <label for="object">Objeto<span>*</span></label>
+                                                <select name="object">
+                                                    <option value="selecet">Seleccionar objeto</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="body__content-footer">
+                                    <div class="body__footer-left">
+                                    </div>
+                                    <div class="body__footer-right">
+                                        <a class="block-right__button prev-btn">Atrás</a>
+                                        <a class="block-right__button submit-btn">Guardar</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
