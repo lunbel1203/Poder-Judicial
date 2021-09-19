@@ -25,6 +25,8 @@
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
 h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
 }
@@ -32,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -40,7 +43,10 @@ body {
     font-weight: 300;
 }
 
-.container {
+/********************************
+**  SCREEN TRIBUNAL
+*********************************/
+.tribunal {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -48,7 +54,7 @@ body {
     align-items: center;
 }
 
-.expediente {
+.tribunal__container {
     width: var(--full-width);
     height: var(--full-height);
     display: flex;
@@ -115,6 +121,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    color: #9B9B9B;
 }
 
 .borrador__details {
@@ -156,7 +163,6 @@ body {
     text-align: left;
     font: normal normal bold 8px/10px Helvetica Neue;
     letter-spacing: 0px;
-    color: #CE2529;
     text-decoration: none;
 }
 
@@ -187,13 +193,13 @@ body {
     font-weight: bold;
 }
 
-form {
+.tribunal form {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-form label {
+.tribunal form label {
     width: 100%;
     margin-bottom: 179px;
 }
@@ -203,6 +209,19 @@ form label {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.tribunal form select {
+    width: 100%;
+    height: 38px;
+    padding: 10px;
+    background-color: white;
+    border: solid 1px;
+    border-radius: 5px;
+    background: transparent linear-gradient(180deg, #E8E8E8 0%, #FEFEFE 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 .block-right__button {
@@ -221,6 +240,287 @@ form label {
     background-color: #2F6CEC;
 }
 
+/********************************
+**  SCREEN EXPEDIENTE
+*********************************/
+.expedientes {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expedientes__container {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.header__screen {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.back__btn a {
+    text-align: left;
+    font-family: Helvetica Neue;
+    letter-spacing: 0px;
+    color: #131414;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.borradores__disponibles a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica Neue;
+    font-size: 11px;
+    line-height: 13px;
+    color: var(--unnamed-color-0050dd);
+    text-align: left;
+    letter-spacing: 0px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.borradores__disponibles svg {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.screen__body {
+    width: 100%;
+    padding: 25px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.body__header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.screen__header {
+    width: 100%;
+    border-bottom: 2px solid #EDF1F7;
+    padding-bottom: 13px;
+}
+
+.screen__header h1 {
+    font-size: 20px;
+    font-family: Helvetica Neue;
+    line-height: 25px;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #577FF6;
+}
+
+.panel__tabs {
+    width: 100%;
+    height: 88px;
+    margin-top: 14px;
+}
+
+.panel__tabs__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.panel__tab {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    position: relative;
+}
+
+.panel__tab h3 {
+    margin-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.tab__active {
+    background-color: #F4FBFD;
+    position: relative;
+}
+
+.tab__active::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -13px;
+    border-top: 45px solid transparent;
+    border-left: 15px solid #F4FBFD;
+    border-bottom: 45px solid transparent;
+}
+
+.tab__active:last-child::after {
+    border: none;
+}
+
+.tab__completed {
+    background-color: var(--unnamed-color-2b589a);
+    position: relative;
+    color: #fff;
+    z-index: 5;
+}
+
+.tab__completed::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -15px;
+    border-top: 45px solid transparent;
+    border-left: 15px solid #2b589a;
+    border-bottom: 45px solid transparent;
+}
+
+.panel__progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #F7F7F7;
+    position: relative;
+}
+
+.progress__bar {
+    width: 0%;
+    /* animation-duration: 1s;
+    animation-name: width-animation; */
+    height: 6px;
+    background-color: #84CE3F;
+    transition: width 1s ease;
+}
+
+@keyframes width-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes width-back {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+.actions__buttons {
+    width: 100%;
+    height: 46px;
+    display: flex;
+}
+
+.actions__link {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #CED4DA;
+    color: var(--unnamed-color-2b589a);
+}
+
+.actions__link:hover {
+    background-color: #264E8F;
+    color: white;
+    border-color: #264E8F;
+}
+
+.actions__link:first-child {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.actions__link:last-child {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.step__content {
+    width: 100%;
+    display: none;
+}
+
+.step__active {
+    display: block;
+}
+
+.step__content-title {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: var(--unnamed-color-5e5d62);
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+
+
+.body__content-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body__footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.body__footer-right a {
+    margin-left: 10px;
+    cursor: pointer
+}
+
+.disabled__button {
+    pointer-events: none;
+    cursor: default;
+    background-color: #C7C7C7;
+    color: var(--unnamed-color-5e5d62);
+}
+
+/********************************
+**  FORMS
+*********************************/
+label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+label span {
+    color: var(--unnamed-color-ce2529);
+}
+
 form select {
     width: 100%;
     height: 38px;
@@ -231,5 +531,97 @@ form select {
     background: transparent linear-gradient(180deg, #E8E8E8 0%, #FEFEFE 100%) 0% 0% no-repeat padding-box;
     border: 1px solid #CED4DA;
     border-radius: 5px;
+}
+
+.form__group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 15px;
+}
+
+.form__group:first-child {
+    margin-top: 0px;
+}
+
+input {
+    width: 100%;
+    height: 37px;
+    background-color: var(--unnamed-color-ffffff);
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+input[disabled="disabled"] {
+    background-color: #ECECEC;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+}
+
+/********************************
+**  COMPONENTE DESPOSITANTE
+*********************************/
+.recepcion__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.body__content-depositante {
+    width: 450px;
+    background-color: var(--unnamed-color-ffffff);
+    border: 2px solid #D8D8D8;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.step__content-title {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: var(--unnamed-color-5e5d62);
+    letter-spacing: 0px;
+    text-align: left;
+    border-bottom: 2px solid #D8D8D8;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.depositante__form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.id a {
+    width: 49px;
+    height: 37px;
+    background: #3572F2 0% 0% no-repeat padding-box;
+    border: 1px solid #2166F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.id input {
+    width: calc(100% - 49px);
+    border-radius: 4px 0px 0px 4px;
+}
+
+.column {
+    width: calc((100% / 2) - 19.5px);
+}
+
+/********************************
+**  COMPONENTE DEPOSITO
+*********************************/
+.body__content-deposito {
+    width: calc(100% - 480px);
 }
