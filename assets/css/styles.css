@@ -405,29 +405,9 @@ body {
 
 .progress__bar {
     width: 0%;
-    /* animation-duration: 1s;
-    animation-name: width-animation; */
     height: 6px;
     background-color: #84CE3F;
     transition: width 1s ease;
-}
-
-@keyframes width-animation {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes width-back {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 0%;
-    }
 }
 
 .actions__buttons {
@@ -535,10 +515,6 @@ form select {
 
 .form__group {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     margin-top: 15px;
 }
 
@@ -599,6 +575,15 @@ input[disabled="disabled"] {
     justify-content: space-between;
 }
 
+.form__group.id {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
 .id a {
     width: 49px;
     height: 37px;
@@ -615,8 +600,12 @@ input[disabled="disabled"] {
     border-radius: 4px 0px 0px 4px;
 }
 
-.column {
+.column-2 {
     width: calc((100% / 2) - 19.5px);
+}
+
+.column-3 {
+    width: calc((100% / 3) - 6.66px);
 }
 
 /********************************
@@ -624,4 +613,48 @@ input[disabled="disabled"] {
 *********************************/
 .body__content-deposito {
     width: calc(100% - 480px);
+}
+
+.deposito__row {
+    width: 100%;
+    margin-bottom: 23px;
+}
+
+.deposito__row .step__content-title {
+    margin-bottom: 13px;
+}
+
+.row__field {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marginT {
+    margin-top: 0px;
+}
+
+.marginR {
+    margin-right: 10px;
+}
+
+.column-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column-icon input {
+    width: calc(100% - 40px);
+    border-radius: 4px 0px 0px 4px;
+}
+
+.column-icon .icon-item {
+    width: 40px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #CED4DA;
+    border-radius: 0px 4px 4px 0px;
 }
