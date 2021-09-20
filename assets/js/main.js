@@ -47,7 +47,26 @@ window.onload = () => {
         }
 
         let position = tabs[index].getBoundingClientRect().right;
-        document.getElementById('progress__bar').style.width = `${position - 50}px`;
+
+        if (index === 0) {
+            document.getElementById('progress__bar').style.width = `16.45%`;
+        } else if (index === 1) {
+            document.getElementById('progress__bar').style.width = `33.30%`;
+
+        } else if (index === 2) {
+            document.getElementById('progress__bar').style.width = `49.8%`;
+
+        } else if (index === 3) {
+            document.getElementById('progress__bar').style.width = `66.6%`;
+
+        } else if (index === 4) {
+            document.getElementById('progress__bar').style.width = `83.40%`;
+
+        } else if (index === 5) {
+            document.getElementById('progress__bar').style.width = `100%`;
+
+        }
+        // document.getElementById('progress__bar').style.width = `${position}px`;
 
         tabs[index].classList.remove('tab__completed');
         tabs[index].classList.add('tab__active');

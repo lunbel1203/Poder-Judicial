@@ -244,7 +244,7 @@ body {
 **  SCREEN EXPEDIENTE
 *********************************/
 .expedientes {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,7 +256,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 30px;
+    margin: 30px 0px;
 }
 
 .header__screen {
@@ -299,8 +299,7 @@ body {
 .screen__body {
     width: 100%;
     padding: 25px;
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background-color: var(--unnamed-color-ffffff);
     box-shadow: 0px 3px 6px #00000029;
 }
 
@@ -414,6 +413,7 @@ body {
     width: 100%;
     height: 46px;
     display: flex;
+    margin-bottom: 14px;
 }
 
 .actions__link {
@@ -657,6 +657,203 @@ input[disabled="disabled"] {
     border: 1px solid #CED4DA;
     border-radius: 0px 4px 4px 0px;
     color: #7A838A;
+}
+
+/************************************
+**  PANTALLA INMOBILIARIO Y PARTES
+*************************************/
+.table-full {
+    width: 100%;
+    height: 400px;
+    background-color: var(--unnamed-color-ffffff);
+    border: 2px solid #D3D3D3;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    color: #7E807F;
+}
+
+.table__header {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #111111;
+    color: #222C45;
+}
+
+.header__item {
+    width: calc(100% / 4);
+}
+
+.header__item:first-child {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__item:last-child {
+    width: 12%;
+}
+
+.table__body {
+    width: 100%;
+}
+
+.table__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #D7D7D7;
+    height: 63px;
+}
+
+.table__row:last-child {
+    border: none;
+}
+
+.table input[type="checkbox"] {
+    width: 16px;
+}
+
+.saveDraft-btn {
+    width: 186px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font: normal normal 300 16px/18px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #5E5D62;
+    border: 2px solid #5E5D62;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/************************************
+**  PANTALLA DOCUMENTOS
+*************************************/
+.table-ocho {
+    width: calc(100% - 380px);
+}
+
+.body__content-documents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body__content-documentMatriz {
+    width: 375px;
+    height: 400px;
+    background-color: var(--unnamed-color-ffffff);
+    border: 2px solid #D8D8D8;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.body__content-documentMatriz .step__content-title {
+    margin-bottom: 18px;
+}
+
+.documentMatriz__content {
+    width: 100%;
+}
+
+.documents__legends {
+    width: 100%;
+}
+
+.legends__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #B4B4B4;
+}
+
+.legend__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.legend__item:last-child {
+    margin-right: 0px;
+}
+
+.legend__item h3 {
+    text-align: left;
+    font-family: Helvetica Neue;
+    letter-spacing: 0px;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.legend {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.legend__noCargado .legend {
+    background-color: #7E807F;
+    color: #7E807F;
+}
+
+.legend__vinculado .legend {
+    background-color: #DBD42E;
+    color: #DBD42E;
+}
+
+.legend__cargado .legend {
+    background-color: #20994A;
+    color: #20994A;
+}
+
+.legend__noCargado {
+    color: #7E807F;
+}
+
+.legend__vinculado {
+    color: #DBD42E;
+}
+
+.legend__cargado {
+    color: #20994A;
+}
+
+.documents__text {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Helvetica Neue;
+    letter-spacing: 0px;
+    color: #575962;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+.documents__types {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.rounded {
+    border-radius: 100%;
+}
+
+.documents__types div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4px;
 }
 
 /********************************
