@@ -13,12 +13,12 @@
         <div class="expedientes__container">
             <div class="header__screen">
                 <div class="back__btn">
-                    <a href="/index.html">
+                    <a id="back__btn">
                         <i class="fas fa-arrow-left"></i> Regresar
                     </a>
                 </div>
-                <div class="borradores__disponibles" id="borradores__disponibles">
-                    <a href="/index.html">
+                <div class="borradores__disponibles">
+                    <a id="borradores__disponibles">
                         <i class="far fa-file-alt"></i>  5 borradores disponibles
                     </a>
                 </div>
@@ -262,7 +262,7 @@
                             </div>
                             <div class="body__content-footer">
                                 <div class="body__footer-left">
-                                    <a class="saveDraft-btn">Guardar borrador</a>
+                                    <a class="saveDraft-btn savedDraft__button">Guardar borrador</a>
                                 </div>
                                 <div class="body__footer-right">
                                     <a class="block-right__button prev-btn">Atrás</a>
@@ -313,7 +313,7 @@
                             </div>
                             <div class="body__content-footer">
                                 <div class="body__footer-left">
-                                    <a class="saveDraft-btn">Guardar borrador</a>
+                                    <a class="saveDraft-btn savedDraft__button">Guardar borrador</a>
                                 </div>
                                 <div class="body__footer-right">
                                     <a class="block-right__button prev-btn">Atrás</a>
@@ -403,7 +403,7 @@
                             </div>
                             <div class="body__content-footer">
                                 <div class="body__footer-left">
-                                    <a class="saveDraft-btn">Guardar borrador</a>
+                                    <a class="saveDraft-btn savedDraft__button">Guardar borrador</a>
                                 </div>
                                 <div class="body__footer-right">
                                     <a class="block-right__button prev-btn">Atrás</a>
@@ -491,7 +491,7 @@
                             </div>
                             <div class="body__content-footer">
                                 <div class="body__footer-left">
-                                    <a class="saveDraft-btn">Guardar borrador</a>
+                                    <a class="saveDraft-btn savedDraft__button">Guardar borrador</a>
                                 </div>
                                 <div class="body__footer-right">
                                     <a class="block-right__button prev-btn">Atrás</a>
@@ -500,173 +500,267 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step__content step-6" id="verificacion">
-                        <div class="verificacion__recepcion">
-                            <h1 class="verificacion__title">
-                                Recepción
-                            </h1>
-                            <div class="recepcion__content">
-                                <div class="body__content-depositante">
-                                    <h3 class="step__content-title">
-                                        Depositante
-                                    </h3>
-                                    <div class="depositante__form">
-                                        <div class="form__group">
-                                            <label for="typeId">Tipo de identificación<span>*</span></label>
-                                            <select name="typeId">
-                                                <option value="Seleccionar tipo de identificación">Seleccionar tipo de identificación</option>
-                                                <option value="pasaporte">Pasaporte</option>
-                                                <option value="cedula">Cédula</option>
-                                            </select>
+                    <div class="step__content step-6 " id="verificacion">
+                        <div class="verificacion__content">
+                            <div class="verificacion__recepcion">
+                                <h1 class="verificacion__title">
+                                    Recepción
+                                </h1>
+                                <div class="recepcion__content">
+                                    <div class="body__content-depositante">
+                                        <h3 class="step__content-title">
+                                            Depositante
+                                        </h3>
+                                        <div class="depositante__form">
+                                            <div class="form__group">
+                                                <label for="typeId">Tipo de identificación<span>*</span></label>
+                                                <select name="typeId">
+                                                    <option value="Seleccionar tipo de identificación">Seleccionar tipo de identificación</option>
+                                                    <option value="pasaporte">Pasaporte</option>
+                                                    <option value="cedula">Cédula</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group id">
+                                                <label for="id">Identificación<span>*</span></label>
+                                                <input type="text" name="id" placeholder="002-1231614-5">
+                                                <a href=""class="searchId"><i class="fas fa-search"></i></a>
+                                            </div>
+                                            <div class="form__group">
+                                                <label for="full-name">Nombre completo<span>*</span></label>
+                                                <input type="text" name="full-name" placeholder="Jose Luis Beltre Vizcaino" disabled="disabled">
+                                            </div>
+                                            <div class="form__group phone">
+                                                <label for="phone">Teléfono</label>
+                                                <input type="text" name="phone" placeholder="Ej.: 809-555-5555">
+                                            </div>
+                                            <div class="form__group email">
+                                                <label for="full-name">Correo electrónico</label>
+                                                <input type="text" name="email" placeholder="Ej.: lunbel1203@gmail.com">
+                                            </div>
+                                            <div class="form__group">
+                                                <label for="profile">Perfil de portal<span>*</span></label>
+                                                <select name="typeId">
+                                                    <option value="profile">Seleccione perfil</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="form__group id">
-                                            <label for="id">Identificación<span>*</span></label>
-                                            <input type="text" name="id" placeholder="002-1231614-5">
-                                            <a href=""class="searchId"><i class="fas fa-search"></i></a>
+                                    </div>
+                                    <div class="body__content-deposito">
+                                        <div class="deposito__row">
+                                            <h3 class="step__content-title">
+                                                Deposito
+                                            </h3>
+                                            <div class="row__field">
+                                                <div class="form__group column-3 marginT marginR column-icon">
+                                                    <label for="receptionDate">Fecha recepción<span>*</span></label>
+                                                    <input type="datetime-local" name="receptionDate" placeholder="dd/mm/yyyy hh:mm am/pm">
+                                                    <span class="icon-item"><i class="far fa-calendar"></i></span>
+                                                </div>
+                                                <div class="form__group column-3 marginT">
+                                                    <label for="nuc">NUC<span>*</span></label>
+                                                    <input type="text" name="nuc" placeholder="2021-00015">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form__group">
-                                            <label for="full-name">Nombre completo<span>*</span></label>
-                                            <input type="text" name="full-name" placeholder="Jose Luis Beltre Vizcaino" disabled="disabled">
+                                        
+                                        <div class="deposito__row">
+                                            <h3 class="step__content-title">
+                                                Ubicación
+                                            </h3>
+                                            <div class="row__field">
+                                                <div class="form__group column-3 marginT marginR">
+                                                    <label for="categoryTribunal">Categoría Tribunal<span>*</span></label>
+                                                    <select name="categoryTribunal">
+                                                        <option value="selecet">Seleccione categoría</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3 marginT marginR">
+                                                    <label for="matter">Materia<span>*</span></label>
+                                                    <select name="matter">
+                                                        <option value="selecet">Seleccionar materia</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3 marginT">
+                                                    <label for="matter">Sede</label>
+                                                    <select name="matter">
+                                                        <option value="selecet">Seleccionar sede</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3 marginR">
+                                                    <label for="departamentJudicial">Departamento Judicial*<span>*</span></label>
+                                                    <select name="departamentJudicial">
+                                                        <option value="selecet">Seleccionar departamento</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3 marginR">
+                                                    <label for="districtJudicial">Distrito Judicial*<span>*</span></label>
+                                                    <select name="districtJudicial">
+                                                        <option value="selecet">Seleccionar distrito</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3">
+                                                    <label for="tribunal">Tribunal<span>*</span></label>
+                                                    <select name="tribunal">
+                                                        <option value="selecet">Seleccionar tribunal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3 marginR">
+                                                    <label for="sala">Sala</label>
+                                                    <select name="sala">
+                                                        <option value="selecet">Seleccionar sala</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form__group column-2 email">
-                                            <label for="full-name">Correo electrónico</label>
-                                            <input type="text" name="email" placeholder="Ej.: lunbel1203@gmail.com">
-                                        </div>
-                                        <div class="form__group column-2 sexo">
-                                            <label for="sexo">Sexo</label>
-                                            <select name="typeId">
-                                                <option value="select-default">Seleccionar sexo</option>
-                                                <option value="hombre">Hombre</option>
-                                                <option value="mujer">Mujer</option>
-                                            </select>
-                                        </div>
-                                        <div class="form__group column-2 phone">
-                                            <label for="phone">Teléfono</label>
-                                            <input type="text" name="phone" placeholder="Ej.: 809-555-5555">
-                                        </div>
-                                        <div class="form__group column-2 mobile">
-                                            <label for="mobile">Celular</label>
-                                            <input type="text" name="mobile" placeholder="Ej.: 829-427-4047">
-                                        </div>
-                                        <div class="form__group">
-                                            <label for="profile">Perfil de portal<span>*</span></label>
-                                            <select name="typeId">
-                                                <option value="profile">Seleccione perfil</option>
-                                            </select>
+                                        
+                                        <div class="deposito__row">
+                                            <h3 class="step__content-title">
+                                                Trámite
+                                            </h3>
+                                            <div class="row__field">
+                                                <div class="form__group column-3 marginT marginR">
+                                                    <label for="subject">Asunto<span>*</span></label>
+                                                    <select name="subject">
+                                                        <option value="selecet">Seleccionar asunto</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form__group column-3 marginT">
+                                                    <label for="object">Objeto<span>*</span></label>
+                                                    <select name="object">
+                                                        <option value="selecet">Seleccionar objeto</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="body__content-deposito">
-                                    <div class="deposito__row">
-                                        <h3 class="step__content-title">
-                                            Deposito
-                                        </h3>
-                                        <div class="row__field">
-                                            <div class="form__group column-3 marginT marginR column-icon">
-                                                <label for="receptionDate">Fecha recepción<span>*</span></label>
-                                                <input type="datetime-local" name="receptionDate" placeholder="dd/mm/yyyy hh:mm am/pm">
-                                                <span class="icon-item"><i class="far fa-calendar"></i></span>
+                            </div>
+
+                            <div class="verificacion__sections columnas-4">
+                                <div class="verificacion__inmuebles columna-verificacion">
+                                    <h1 class="verificacion__title">
+                                        Inmuebles
+                                    </h1>
+                                    <div class="body__content-inmobiliario">
+                                        <div class="table-full table">
+                                            <div class="table__header">
+                                                <div class="header__item">Distrito Catastral</div>
+                                                <div class="header__item">Tipo de Inmueble</div>
+                                                <div class="header__item">Titulo</div>
+                                                <div class="header__item">Teléfono</div>
                                             </div>
-                                            <div class="form__group column-3 marginT marginR">
-                                                <label for="newExpediente">¿Es un expediente nuevo?<span>*</span></label>
-                                                <select name="newExpediente">
-                                                    <option value="selecet">Seleccionar</option>
-                                                    <option value="si">Si</option>
-                                                    <option value="no">No</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginT">
-                                                <label for="nuc">NUC<span>*</span></label>
-                                                <input type="text" name="nuc" placeholder="2021-00015">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="deposito__row">
-                                        <h3 class="step__content-title">
-                                            Ubicación
-                                        </h3>
-                                        <div class="row__field">
-                                            <div class="form__group column-3 marginT marginR">
-                                                <label for="categoryTribunal">Categoría Tribunal<span>*</span></label>
-                                                <select name="categoryTribunal">
-                                                    <option value="selecet">Seleccione categoría</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginT marginR">
-                                                <label for="matter">Materia<span>*</span></label>
-                                                <select name="matter">
-                                                    <option value="selecet">Seleccionar materia</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginT">
-                                                <label for="matter">Sede</label>
-                                                <select name="matter">
-                                                    <option value="selecet">Seleccionar sede</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginR">
-                                                <label for="departamentJudicial">Departamento Judicial*<span>*</span></label>
-                                                <select name="departamentJudicial">
-                                                    <option value="selecet">Seleccionar departamento</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginR">
-                                                <label for="districtJudicial">Distrito Judicial*<span>*</span></label>
-                                                <select name="districtJudicial">
-                                                    <option value="selecet">Seleccionar distrito</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3">
-                                                <label for="tribunal">Tribunal<span>*</span></label>
-                                                <select name="tribunal">
-                                                    <option value="selecet">Seleccionar tribunal</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginR">
-                                                <label for="sala">Sala</label>
-                                                <select name="sala">
-                                                    <option value="selecet">Seleccionar sala</option>
-                                                </select>
+                                            <div class="table__body">
+                                                <div class="table__row">
+                                                    <div class="header__item">San Juan</div>
+                                                    <div class="header__item">Condominio</div>
+                                                    <div class="header__item">Juan Maraca</div>
+                                                    <div class="header__item">809-555-5555</div>
+                                                </div>
+                                                <div class="table__row">
+                                                    <div class="header__item">Santo Domingo</div>
+                                                    <div class="header__item">Apartamento</div>
+                                                    <div class="header__item">Pepin corripio</div>
+                                                    <div class="header__item">809-555-5555</div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class="deposito__row">
-                                        <h3 class="step__content-title">
-                                            Trámite
-                                        </h3>
-                                        <div class="row__field">
-                                            <div class="form__group column-3 marginT marginR">
-                                                <label for="procedureType">Tipo de procedimiento<span>*</span></label>
-                                                <select name="procedureType">
-                                                    <option value="selecet">Seleccionar tipo de procedimiento</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginT marginR">
-                                                <label for="subject">Asunto<span>*</span></label>
-                                                <select name="subject">
-                                                    <option value="selecet">Seleccionar asunto</option>
-                                                </select>
-                                            </div>
-                                            <div class="form__group column-3 marginT">
-                                                <label for="object">Objeto<span>*</span></label>
-                                                <select name="object">
-                                                    <option value="selecet">Seleccionar objeto</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                </div>
-                                <div class="body__content-footer">
-                                    <div class="body__footer-left">
-                                    </div>
-                                    <div class="body__footer-right">
-                                        <a class="block-right__button prev-btn">Atrás</a>
-                                        <a class="block-right__button submit-btn">Guardar</a>
                                     </div>
                                 </div>
+
+                                <div class="verificacion__partes columna-verificacion">
+                                    <h1 class="verificacion__title">
+                                        Partes
+                                    </h1>
+                                    <div class="body__content-inmobiliario">
+                                        <div class="table-full table">
+                                            <div class="table__header">
+                                                <div class="header__item">Nombre completo</div>
+                                                <div class="header__item">Identificación</div>
+                                                <div class="header__item">Calidad</div>
+                                                <div class="header__item">Representante</div>
+                                            </div>
+                                            <div class="table__body">
+                                                <div class="table__row">
+                                                    <div class="header__item">Juan Arturo</div>
+                                                    <div class="header__item">001-0035942-1</div>
+                                                    <div class="header__item">Recurrente</div>
+                                                    <div class="header__item">Polo Contreras</div>
+                                                </div>
+                                                <div class="table__row">
+                                                    <div class="header__item">Polo Contreras</div>
+                                                    <div class="header__item">001-0035942-1</div>
+                                                    <div class="header__item">Representante</div>
+                                                    <div class="header__item">N/A</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="verificacion__sections columnas-3">
+                                <div class="verificacion__documentos columna-verificacion">
+                                    <h1 class="verificacion__title">
+                                        Documentos
+                                    </h1>
+                                    <div class="body__content-inmobiliario">
+                                        <div class="table-full table">
+                                            <div class="table__header">
+                                                <div class="header__item">Nombre del documento</div>
+                                                <div class="header__item">Tipo de documento</div>
+                                                <div class="header__item">Fecha de registro</div>
+                                            </div>
+                                            <div class="table__body">
+                                                <div class="table__row">
+                                                    <div class="header__item">Documento de prueba</div>
+                                                    <div class="header__item">Prueba</div>
+                                                    <div class="header__item">24/08/2021</div>
+                                                </div>
+                                                <div class="table__row">
+                                                    <div class="header__item">Sentencia</div>
+                                                    <div class="header__item">Sentencia</div>
+                                                    <div class="header__item">24/08/2021</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="verificacion__tasa columna-verificacion">
+                                    <h1 class="verificacion__title">
+                                        Tasas Judiciales
+                                    </h1>
+                                    <div class="body__content-inmobiliario">
+                                        <div class="table-full table">
+                                            <div class="table__header">
+                                                <div class="header__item">Tipo de documento</div>
+                                                <div class="header__item">Nro. de documento</div>
+                                                <div class="header__item">Valor RD$</div>
+                                            </div>
+                                            <div class="table__body">
+                                                <div class="table__row">
+                                                    <div class="header__item">Recibo</div>
+                                                    <div class="header__item">056-562</div>
+                                                    <div class="header__item">RD$35.00</div>
+                                                </div>
+                                                <div class="table__row">
+                                                    <div class="header__item">Sello</div>
+                                                    <div class="header__item">10-695</div>
+                                                    <div class="header__item">RD$10.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="body__content-footer">
+                            <div class="body__footer-left">
+                            </div>
+                            <div class="body__footer-right">
+                                <a class="block-right__button prev-btn">Atrás</a>
+                                <a class="block-right__button submit-btn">Guardar</a>
                             </div>
                         </div>
                     </div>
@@ -674,6 +768,182 @@
             </div>
         </div>
     </main>
+
+    <div class="modals__all">
+        <div class="modal modal__case-number ">
+            <div class="modal__container">
+                <div class="modal__body">
+                    <div class="modal__icon">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div class="modal__text">
+                        <p>El número de caso consultado no fue encontrado en la base de datos del sistema, favor revisar e intentar Nuevamente.</p>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a class="block-right__button closeModal">Volver</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal__action-delete ">
+            <div class="modal__container">
+                <div class="modal__body">
+                    <div class="modal__icon">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div class="modal__text">
+                        <p>Esta acción eliminara <span>(2)</span> registros, ¿deseas continuar?</p>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a class="block-right__button danger__button closeModal">Cancelar</a>
+                    <a class="block-right__button closeModal">Continuar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal__saved-draft ">
+            <div class="modal__container">
+                <div class="modal__body">
+                    <div class="modal__icon">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div class="modal__text">
+                        <p>El borrador de esta solicitud fue guardado correctamente, ¿desea imprimir una constancia para el usuario?</p>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a class="block-right__button border-blue__button closeModal">No, solo guardar</a>
+                    <a class="block-right__button closeModal">Si, imprimir</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal__regresar ">
+            <div class="modal__container">
+                <div class="modal__body">
+                    <div class="modal__icon">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div class="modal__text">
+                        <p>Realizar esta acción podría ocasionar que no se guarde la información registrada hasta el momento, ¿deseas continuar?</p>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a class="block-right__button danger__button closeModal">Cancelar</a>
+                    <a href="/index.html" class="block-right__button">Continuar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal__delete-draft ">
+            <div class="modal__container">
+                <div class="modal__body">
+                    <div class="modal__icon">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <div class="modal__text">
+                        <p>El borrador que desea eliminar ya tiene un <span>constancia</span> generada para el usuario que deposito, aun así <br>¿deseas continuar?</p>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a class="block-right__button danger__button closeModal">Cancelar</a>
+                    <a class="block-right__button closeModal">Continuar</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal modal__borradores ">
+            <div class="modal__container">
+                <div class="borradores">
+                    <div class="borradores__title modal__header">
+                        <h1>Borradores</h1>
+                        <a class="closeModal"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="borradores__container">
+                        <div class="borradores__borrador">
+                            <div class="borrador__icon">
+                                <i class="far fa-eye-slash"></i>
+                            </div>
+                            <div class="borrador__details">
+                                <p><span>Depositante:</span> Martín Duquela</p>
+                                <p><span>Fecha de borrador:</span> 12/05/2015 a las 10:25 a.m.</p>
+                                <p><span>Tribunal:</span> Presidencia Camara Civil Jdo. 1ra. Inst. D.N.</p>
+                                <p><span>Asunto:</span> Desglose de expediente</p>
+                                <div class="borrador__footer">
+                                    <div class="borrador__date">
+                                        <i class="far fa-clock"></i> Vence en 8 días
+                                    </div>
+                                    <div class="borrador__button">
+                                        <a class="borrador__delete" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="borradores__borrador">
+                            <div class="borrador__icon">
+                                <i class="far fa-eye-slash"></i>
+                            </div>
+                            <div class="borrador__details">
+                                <p><span>Depositante:</span> Martín Duquela</p>
+                                <p><span>Fecha de borrador:</span> 12/05/2015 a las 10:25 a.m.</p>
+                                <p><span>Tribunal:</span> Presidencia Camara Civil Jdo. 1ra. Inst. D.N.</p>
+                                <p><span>Asunto:</span> Desglose de expediente</p>
+                                <div class="borrador__footer">
+                                    <div class="borrador__date">
+                                        <i class="far fa-clock"></i> Vence en 8 días
+                                    </div>
+                                    <div class="borrador__button">
+                                        <a class="borrador__delete" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="borradores__borrador">
+                            <div class="borrador__icon">
+                                <i class="far fa-eye-slash"></i>
+                            </div>
+                            <div class="borrador__details">
+                                <p><span>Depositante:</span> Martín Duquela</p>
+                                <p><span>Fecha de borrador:</span> 12/05/2015 a las 10:25 a.m.</p>
+                                <p><span>Tribunal:</span> Presidencia Camara Civil Jdo. 1ra. Inst. D.N.</p>
+                                <p><span>Asunto:</span> Desglose de expediente</p>
+                                <div class="borrador__footer">
+                                    <div class="borrador__date">
+                                        <i class="far fa-clock"></i> Vence en 8 días
+                                    </div>
+                                    <div class="borrador__button">
+                                        <a class="borrador__delete" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="borradores__borrador">
+                            <div class="borrador__icon">
+                                <i class="far fa-eye-slash"></i>
+                            </div>
+                            <div class="borrador__details">
+                                <p><span>Depositante:</span> Martín Duquela</p>
+                                <p><span>Fecha de borrador:</span> 12/05/2015 a las 10:25 a.m.</p>
+                                <p><span>Tribunal:</span> Presidencia Camara Civil Jdo. 1ra. Inst. D.N.</p>
+                                <p><span>Asunto:</span> Desglose de expediente</p>
+                                <div class="borrador__footer">
+                                    <div class="borrador__date">
+                                        <i class="far fa-clock"></i> Vence en 8 días
+                                    </div>
+                                    <div class="borrador__button">
+                                        <a class="borrador__delete" href="#">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/assets/fontawesome/js/all.js"></script>
     <script type="text/javascript" src="/assets/js/main.js"></script>

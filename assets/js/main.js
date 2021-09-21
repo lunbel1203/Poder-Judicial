@@ -46,8 +46,6 @@ window.onload = () => {
             index --;
         }
 
-        let position = tabs[index].getBoundingClientRect().right;
-
         if (index === 0) {
             document.getElementById('progress__bar').style.width = `16.45%`;
         } else if (index === 1) {
@@ -66,7 +64,6 @@ window.onload = () => {
             document.getElementById('progress__bar').style.width = `100%`;
 
         }
-        // document.getElementById('progress__bar').style.width = `${position}px`;
 
         tabs[index].classList.remove('tab__completed');
         tabs[index].classList.add('tab__active');
@@ -80,4 +77,68 @@ window.onload = () => {
 
     }
 
+
+    /***********************************************************
+    * MODALS
+    ************************************************************/
+    const modals = document.querySelectorAll('.modal');
+    const savedDraftButton = form.querySelectorAll('.savedDraft__button');
+    const backButton = document.getElementById('back__btn');
+    const draftsAvailableButton = document.getElementById('borradores__disponibles');
+    
+    const caseNumber = form.querySelector('.step-1 input[name="nuc"]');
+    const closeModalButton = document.querySelectorAll('.closeModal');
+
+    const openModal = (e) => {
+        e.preventDefault();
+
+        if (e.target.id === 'back__btn') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('modal__regresar')) {
+                    modal.classList.add('modal__active')
+                }
+            })
+        }
+
+        if (e.target.id === 'borradores__disponibles') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('modal__borradores')) {
+                    modal.classList.add('modal__active')
+                }
+            })
+        }
+
+        if (e.target.classList.contains('savedDraft__button')) {
+            modals.forEach(modal => {
+                if (modal.classList.contains('modal__saved-draft')) {
+                    modal.classList.add('modal__active')
+                }
+            })
+        }
+
+
+        
+    }
+
+    const closeModal = (e) => {
+        e.preventDefault()
+        modals.forEach(modal => {
+            if (modal.classList.contains('modal__active')) {
+                modal.classList.remove('modal__active')
+            }
+        })
+    }
+    
+    // OPEN MODAL
+    backButton.addEventListener('click', openModal)
+    draftsAvailableButton.addEventListener('click', openModal)
+    caseNumber.addEventListener('click', openModal)
+    savedDraftButton.forEach(savedButton => {
+        savedButton.addEventListener('click', openModal)
+    })
+
+    // CLOSE MODALS
+    closeModalButton.forEach(closeButton => {
+        closeButton.addEventListener('click', closeModal)
+    })
 };
