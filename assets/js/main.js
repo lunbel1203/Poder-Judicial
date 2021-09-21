@@ -85,17 +85,43 @@ window.onload = () => {
     const savedDraftButton = form.querySelectorAll('.savedDraft__button');
     const backButton = document.getElementById('back__btn');
     const draftsAvailableButton = document.getElementById('borradores__disponibles');
-    
+    const registerDeleteButton = document.querySelectorAll('.register__delete');
+    const registerInmuebleButton = document.querySelectorAll('.register__inmueble-button');
+
     const caseNumber = form.querySelector('.step-1 input[name="nuc"]');
     const closeModalButton = document.querySelectorAll('.closeModal');
 
     const openModal = (e) => {
         e.preventDefault();
+        
+        if (e.target.name === 'nuc') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('modal__case-number')) {
+                    modal.classList.add('modal__active');
+                }
+            })
+        }
+
+        if (e.target.classList.contains('register__inmueble-button')) {
+            modals.forEach(modal => {
+                if (modal.classList.contains('modal__registroInmueble')) {
+                    modal.classList.add('modal__active');
+                }
+            })
+        }
+
+        if (e.target.classList.contains('register__delete')) {
+            modals.forEach(modal => {
+                if (modal.classList.contains('modal__action-delete')) {
+                    modal.classList.add('modal__active');
+                }
+            })
+        }
 
         if (e.target.id === 'back__btn') {
             modals.forEach(modal => {
                 if (modal.classList.contains('modal__regresar')) {
-                    modal.classList.add('modal__active')
+                    modal.classList.add('modal__active');
                 }
             })
         }
@@ -103,7 +129,7 @@ window.onload = () => {
         if (e.target.id === 'borradores__disponibles') {
             modals.forEach(modal => {
                 if (modal.classList.contains('modal__borradores')) {
-                    modal.classList.add('modal__active')
+                    modal.classList.add('modal__active');
                 }
             })
         }
@@ -111,12 +137,10 @@ window.onload = () => {
         if (e.target.classList.contains('savedDraft__button')) {
             modals.forEach(modal => {
                 if (modal.classList.contains('modal__saved-draft')) {
-                    modal.classList.add('modal__active')
+                    modal.classList.add('modal__active');
                 }
             })
         }
-
-
         
     }
 
@@ -130,15 +154,26 @@ window.onload = () => {
     }
     
     // OPEN MODAL
-    backButton.addEventListener('click', openModal)
-    draftsAvailableButton.addEventListener('click', openModal)
-    caseNumber.addEventListener('click', openModal)
+    backButton.addEventListener('click', openModal);
+
+    registerInmuebleButton.forEach(deleteButton => {
+        deleteButton.addEventListener('click', openModal);
+    })
+
+    registerDeleteButton.forEach(deleteButton => {
+        deleteButton.addEventListener('click', openModal);
+    })
+
+    draftsAvailableButton.addEventListener('click', openModal);
+
+    caseNumber.addEventListener('click', openModal);
+
     savedDraftButton.forEach(savedButton => {
-        savedButton.addEventListener('click', openModal)
+        savedButton.addEventListener('click', openModal);
     })
 
     // CLOSE MODALS
     closeModalButton.forEach(closeButton => {
-        closeButton.addEventListener('click', closeModal)
+        closeButton.addEventListener('click', closeModal);
     })
-};
+}

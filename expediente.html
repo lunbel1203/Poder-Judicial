@@ -157,13 +157,13 @@
                                             </select>
                                         </div>
                                         <div class="form__group column-3 marginR">
-                                            <label for="departamentJudicial">Departamento Judicial*<span>*</span></label>
+                                            <label for="departamentJudicial">Departamento Judicial<span>*</span></label>
                                             <select name="departamentJudicial">
                                                 <option value="selecet">Seleccionar departamento</option>
                                             </select>
                                         </div>
                                         <div class="form__group column-3 marginR">
-                                            <label for="districtJudicial">Distrito Judicial*<span>*</span></label>
+                                            <label for="districtJudicial">Distrito Judicial<span>*</span></label>
                                             <select name="districtJudicial">
                                                 <option value="selecet">Seleccionar distrito</option>
                                             </select>
@@ -222,10 +222,10 @@
                     </div>
                     <div class="step__content step-2 " id="inmobiliario">
                         <div class="actions__buttons">
-                            <a href="" class="actions__link">
+                            <a class="actions__link register__inmueble-button">
                                 <i class="fas fa-store"></i>
                             </a>
-                            <a href="" class="actions__link">
+                            <a class="actions__link register__delete">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </div>
@@ -273,10 +273,10 @@
                     </div>
                     <div class="step__content step-3" id="partes">
                         <div class="actions__buttons">
-                            <a href="" class="actions__link">
+                            <a class="actions__link">
                                 <i class="fas fa-user-plus"></i>
                             </a>
-                            <a href="" class="actions__link">
+                            <a class="actions__link register__delete">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </div>
@@ -324,10 +324,10 @@
                     </div>
                     <div class="step__content step-4 " id="documentos">
                         <div class="actions__buttons">
-                            <a href="" class="actions__link">
+                            <a class="actions__link">
                                 <i class="fas fa-newspaper"></i>
                             </a>
-                            <a href="" class="actions__link">
+                            <a class="actions__link register__delete">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </div>
@@ -414,10 +414,10 @@
                     </div>
                     <div class="step__content step-5 " id="tasas">
                         <div class="actions__buttons">
-                            <a href="" class="actions__link">
+                            <a class="actions__link">
                                 <i class="far fa-newspaper"></i>
                             </a>
-                            <a href="" class="actions__link">
+                            <a class="actions__link register__delete">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </div>
@@ -587,13 +587,13 @@
                                                     </select>
                                                 </div>
                                                 <div class="form__group column-3 marginR">
-                                                    <label for="departamentJudicial">Departamento Judicial*<span>*</span></label>
+                                                    <label for="departamentJudicial">Departamento Judicial<span>*</span></label>
                                                     <select name="departamentJudicial">
                                                         <option value="selecet">Seleccionar departamento</option>
                                                     </select>
                                                 </div>
                                                 <div class="form__group column-3 marginR">
-                                                    <label for="districtJudicial">Distrito Judicial*<span>*</span></label>
+                                                    <label for="districtJudicial">Distrito Judicial<span>*</span></label>
                                                     <select name="districtJudicial">
                                                         <option value="selecet">Seleccionar distrito</option>
                                                     </select>
@@ -939,6 +939,121 @@
                             </div>
                         </div>
                             
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal modal__registroInmueble ">
+            <div class="modal__container">
+                <div class="registro__inmueble">
+                    <div class="modal__header">
+                        <div class="borradores__title">
+                            <h1>Registro de inmueble</h1>
+                        </div>
+                        <a class="closeModal"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="modal__body">
+                        <div class="recepcion__content">
+                            <div class="body__content-depositante">
+                                <h3 class="step__content-title">
+                                    Titular
+                                </h3>
+                                <div class="depositante__form">
+                                    <div class="form__group">
+                                        <label for="typeId">Tipo de identificación<span>*</span></label>
+                                        <select name="typeId">
+                                            <option value="Seleccionar tipo de identificación">Seleccionar tipo de identificación</option>
+                                            <option value="pasaporte">Pasaporte</option>
+                                            <option value="cedula">Cédula</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__group id">
+                                        <label for="id">Identificación<span>*</span></label>
+                                        <input type="text" name="id" placeholder="002-1231614-5">
+                                        <a href=""class="searchId"><i class="fas fa-search"></i></a>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="full-name">Nombre completo</label>
+                                        <input type="text" name="full-name" placeholder="Jose Luis Beltre Vizcaino" disabled="disabled">
+                                    </div>
+                                    <div class="form__group phone">
+                                        <label for="phone">Teléfono</label>
+                                        <input type="text" name="phone" placeholder="Ej.: 809-555-5555">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body__content-deposito">
+                                
+                                <div class="deposito__row">
+                                    <h3 class="step__content-title">
+                                        Ubicación del inmueble
+                                    </h3>
+                                    <div class="row__field">
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="categoryTribunal">Distrito Catastral</label>
+                                            <select name="categoryTribunal">
+                                                <option value="selecet">Seleccionar distrito catastral</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="matter">Provincia</label>
+                                            <select name="matter">
+                                                <option value="selecet">Seleccionar provincia</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3 marginT">
+                                            <label for="matter">Municipio</label>
+                                            <select name="matter">
+                                                <option value="selecet">Seleccionar municipio</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="deposito__row">
+                                    <h3 class="step__content-title">
+                                        Detalles del inmueble
+                                    </h3>
+                                    <div class="row__field">
+                                        <div class="form__group column-3 marginT marginR">
+                                            <label for="procedureType">Tipo Inmueble</label>
+                                            <select name="procedureType">
+                                                <option value="selecet">Seleccionar municipio</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__group column-3  marginT marginR">
+                                            <label for="phone">Matrícula</label>
+                                            <input type="text" name="phone" placeholder="Ingresar matrícula">
+                                        </div>
+                                        <div class="form__group column-3 marginT">
+                                            <label for="phone">Designación posicional</label>
+                                            <input type="text" name="phone" placeholder="Ingresar designación">
+                                        </div>
+                                        <div class="form__group column-3 marginR">
+                                            <label for="phone">Parcela</label>
+                                            <input type="text" name="phone" placeholder="Ingresar parcela">
+                                        </div>
+                                        <div class="form__group column-3 marginR">
+                                            <label for="phone">Manzana</label>
+                                            <input type="text" name="phone" placeholder="Ingresar manzana">
+                                        </div>
+                                        <div class="form__group column-3">
+                                            <label for="phone">Porción</label>
+                                            <input type="text" name="phone" placeholder="Ingresar porción">
+                                        </div>
+                                        <div class="form__group column-3 marginR">
+                                            <label for="phone">Solar</label>
+                                            <input type="text" name="phone" placeholder="Ingresar solar">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__footer">
+                        <a class="block-right__button closeModal">Guardar</a>
                     </div>
                 </div>
             </div>

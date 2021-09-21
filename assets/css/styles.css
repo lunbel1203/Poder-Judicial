@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
 }
 
+a {
+    cursor: pointer;
+}
+
 body {
     font-family: Helvetica Neue;
     background-color: #EDF1F7;
@@ -108,7 +112,6 @@ body {
     font-size: 10px;
     line-height: 12px;
     margin-bottom: 15px;
-    cursor: pointer;
 }
 
 .borradores__borrador:hover {
@@ -274,7 +277,6 @@ body {
     font-size: 20px;
     line-height: 24px;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .borradores__disponibles a {
@@ -290,7 +292,6 @@ body {
     letter-spacing: 0px;
     text-decoration: none;
     font-weight: 400;
-    cursor: pointer;
 }
 
 .borradores__disponibles svg {
@@ -477,7 +478,6 @@ body {
 
 .body__footer-right a {
     margin-left: 10px;
-    cursor: pointer
 }
 
 .disabled__button {
@@ -501,7 +501,7 @@ label span {
     color: var(--unnamed-color-ce2529);
 }
 
-form select {
+select {
     width: 100%;
     height: 38px;
     padding: 10px;
@@ -731,7 +731,6 @@ input[disabled="disabled"] {
     color: #5E5D62;
     border: 2px solid #5E5D62;
     border-radius: 2px;
-    cursor: pointer;
 }
 
 /************************************
@@ -934,6 +933,7 @@ input[disabled="disabled"] {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 9;
 }
 
 .modal__container {
@@ -1056,13 +1056,56 @@ input[disabled="disabled"] {
     color: #575962;
 }
 
-.modal__header a {
-    cursor: pointer;
-}
-
 .modal__borradores .modal__container {
     width: 337px;
-    height: 650px;
+    height: 630px;
+}
+
+.modal__borradores .borradores {
+    border: none;
+}
+
+.registro__inmueble {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registro__inmueble .modal__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 44px 0px 22px;
+    color: #575962;
+    border-bottom: 2px solid #E9ECEF;
+}
+
+.modal__registroInmueble .modal__container {
+    width: 90%;
+    height: auto;
+}
+
+.registro__inmueble .borradores__title {
+    border: none;
+}
+
+.registro__inmueble .borradores__title h1 {
+    padding: 15px 0px;
+}
+
+.modal__registroInmueble .modal__body {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    margin: 23px;
+}
+
+.registro__inmueble .modal__footer {
+    justify-content: flex-end;
+    padding: 0px 25px 25px 25px;
 }
 
 .modal__active {
